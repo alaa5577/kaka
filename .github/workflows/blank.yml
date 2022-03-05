@@ -1,0 +1,61 @@
+
+ EN
+Create Account
+Log in
+
+Log in
+ 
+Create Account
+  
+Platforms
+Features
+Company
+Support
+Developers
+Legal and Policies
+ 
+English
+ 
+Follow us on social media
+v. 4.11.2
+​
+1
+name: CI
+2
+​
+3
+on: [push, workflow_dispatch]
+4
+​
+5
+jobs:
+6
+  build:
+7
+​
+8
+    runs-on: windows-latest
+9
+​
+10
+    steps:
+11
+    - name: Download
+12
+      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+13
+    - name: Extract
+14
+      run: Expand-Archive ngrok.zip
+15
+    - name: Auth
+16
+      run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+17
+      env:
+Windows 10 RDP
+.txt
+1005 B1005 B
+
+Import to MEGA
+Completed
